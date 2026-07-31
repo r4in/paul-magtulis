@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Atty. Paul Magtulis — Landing Page
 
-## Getting Started
+Editorial one-page site for Atty. Paul Anthony Magtulis, a Philippine attorney in
+private practice. Built around the concept **"Clear counsel. Considered action."**
 
-First, run the development server:
+- Next.js (App Router) · TypeScript · Tailwind CSS v4 · Motion
+- Fonts: Newsreader (serif) + Manrope (sans) via `next/font`
+- All copy is grounded in the verified profile at `content/paul-profile.md`;
+  structured site content lives in `content/paul-profile.ts`.
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev    # http://localhost:3000
+npm run lint
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Remaining TODOs (need verified information)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Contact details** — the source document contains no email, phone, or office
+   address. Add them in `content/paul-profile.ts` (`contact`); the contact section
+   and footer render each row automatically once present.
+2. **Inquiry delivery** — the form validates and POSTs to `app/api/inquiry/route.ts`,
+   which is a documented integration point (Resend/SMTP instructions inside). Until
+   wired up, the endpoint returns 503 and the UI tells the visitor honestly that
+   nothing was sent.
+3. **Production domain** — replace the placeholder `site.url` in
+   `content/paul-profile.ts` (used for canonical URL, Open Graph, and JSON-LD).
+4. **Privacy notice** — the footer link is a placeholder; add a real page before launch.
+5. **LinkedIn / profile URL** — not present in the source document; add to
+   `contact.linkedin` if Paul wants it shown.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content rules
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Do not add awards, case results, testimonials, statistics, or superlatives that are
+not supported by `content/paul-profile.md`. The "Representative Work" section was
+deliberately omitted — the source contains no publishable engagements.
