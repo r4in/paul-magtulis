@@ -106,26 +106,26 @@ export function Hero() {
           >
             <motion.div className="absolute inset-0 will-change-transform" style={{ y: imageY }}>
               <Image
-                src="/images/paul/20260522_1714372.jpg"
-                alt="Atty. Paul Magtulis working at his laptop in his office"
+                src="/images/paul/hero.jpg"
+                alt="Atty. Paul Magtulis"
                 fill
                 priority
                 sizes="(min-width: 1024px) 46vw, 100vw"
-                className="scale-[1.12] object-cover saturate-[0.88] contrast-[1.03]"
-                style={{ objectPosition: "76% 62%" }}
+                className="scale-[1.08] object-cover"
+                style={{ objectPosition: "50% 18%" }}
               />
               <div
                 aria-hidden
                 className="absolute inset-0 mix-blend-multiply"
                 style={{
                   background:
-                    "linear-gradient(165deg, rgba(243,240,233,0.14), rgba(122,48,46,0.07) 55%, rgba(17,17,15,0.22))",
+                    "linear-gradient(165deg, rgba(243,240,233,0.08), rgba(122,48,46,0.05) 55%, rgba(17,17,15,0.18))",
                 }}
               />
             </motion.div>
             {/* Registration-mark caption */}
             <p className="absolute bottom-0 left-0 bg-paper/90 px-3 py-2 font-sans text-[0.625rem] font-semibold tracking-[0.18em] text-graphite uppercase">
-              Fig. 01 — In practice
+              Fig. 01 — Portrait
             </p>
           </div>
         </div>
